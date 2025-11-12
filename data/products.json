@@ -1,0 +1,38 @@
+[
+  {
+    "id": "prod-001",
+    "name": "Bebê Reborn Alice",
+    "price": 299.90,
+    "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop"
+  },
+  {
+    "id": "prod-002",
+    "name": "Bebê Reborn Miguel",
+    "price": 349.90,
+    "imageUrl": "https://images.unsplash.com/photo-1522771930-78848d9293e8?w=400&h=400&fit=crop"
+  },
+  {
+    "id": "prod-003",
+    "name": "Bebê Reborn Sofia",
+    "price": 399.90,
+    "imageUrl": "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=400&h=400&fit=crop"
+  },
+  {
+    "id": "prod-004",
+    "name": "Bebê Reborn Pedro",
+    "price": 249.90,
+    "imageUrl": "https://images.unsplash.com/photo-1544552866-d3ed42536cfd?w=400&h=400&fit=crop"
+  },
+  {
+    "id": "prod-005",
+    "name": "Bebê Reborn Laura",
+    "price": 459.90,
+    "imageUrl": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=400&fit=crop"
+  },
+  {
+    "id": "prod-006",
+    "name": "Bebê Reborn Gabriel",
+    "price": 499.90,
+    "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop"
+  }
+]
