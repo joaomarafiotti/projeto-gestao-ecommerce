@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Loja de Bebês Reborn</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/checkout.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">🍼 Loja de Bebês Reborn</h1>
+      <p class="subtitle">Finalizar Compra</p>
+      <nav class="breadcrumb">
+        <a href="/">Início</a> > 
+        <a href="#" id="product-link">Produto</a> > 
+        <span>Checkout</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Loading State -->
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Carregando checkout...</p>
+      </div>
+
+      <!-- Error State -->
+      <div id="error" class="error-message" style="display: none;">
+        <p>❌ Não foi possível carregar o checkout.</p>
+        <p class="error-details"></p>
+        <button onclick="location.href='/'" class="btn-back">Voltar para a Loja</button>
+      </div>
+
+      <!-- Checkout Form -->
+      <div id="checkout-container" class="checkout-container" style="display: none;">
+        <!-- Resumo do Pedido -->
+        <div class="order-summary">
+          <h2>📦 Resumo do Pedido</h2>
+          
+          <div class="summary-product">
+            <img id="summary-image" src="" alt="" class="summary-image">
+            <div class="summary-info">
+              <h3 id="summary-name"></h3>
+              <p id="summary-price" class="summary-price"></p>
+            </div>
+          </div>
+
+          <div class="summary-totals">
+            <div class="summary-line">
+              <span>Subtotal:</span>
+              <span id="subtotal"></span>
+            </div>
+            <div class="summary-line">
+              <span>Frete:</span>
+              <span class="free-shipping">Grátis 🎁</span>
+            </div>
+            <div class="summary-line summary-total">
+              <span>Total:</span>
+              <span id="total"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário de Dados -->
+        <div class="checkout-form">
+          <h2>📝 Dados do Comprador</h2>
+          
+          <form id="form-checkout">
+            <!-- Dados Pessoais -->
+            <div class="form-section">
+              <h3>Informações Pessoais</h3>
+              
+              <div class="form-group">
+                <label for="nome">Nome Completo *</label>
+                <input 
+                  type="text" 
+                  id="nome" 
+                  name="nome" 
+                  required 
+                  placeholder="Digite seu nome completo"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  placeholder="seuemail@exemplo.com"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="telefone">Telefone *</label>
+                <input 
+                  type="tel" 
+                  id="telefone" 
+                  name="telefone" 
+                  required 
+                  placeholder="(00) 00000-0000"
+                >
+              </div>
+            </div>
+
+            <!-- Endereço de Entrega -->
+            <div class="form-section">
+              <h3>Endereço de Entrega</h3>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cep">CEP *</label>
+                  <input 
+                    type="text" 
+                    id="cep" 
+                    name="cep" 
+                    required 
+                    placeholder="00000-000"
+                    maxlength="9"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="estado">Estado *</label>
+                  <input 
+                    type="text" 
+                    id="estado" 
+                    name="estado" 
+                    required 
+                    placeholder="SP"
+                    maxlength="2"
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cidade">Cidade *</label>
+                <input 
+                  type="text" 
+                  id="cidade" 
+                  name="cidade" 
+                  required 
+                  placeholder="São Paulo"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="endereco">Endereço *</label>
+                <input 
+                  type="text" 
+                  id="endereco" 
+                  name="endereco" 
+                  required 
+                  placeholder="Rua, Avenida, etc."
+                >
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="numero">Número *</label>
+                  <input 
+                    type="text" 
+                    id="numero" 
+                    name="numero" 
+                    required 
+                    placeholder="123"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="complemento">Complemento</label>
+                  <input 
+                    type="text" 
+                    id="complemento" 
+                    name="complemento" 
+                    placeholder="Apto, Bloco, etc."
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="form-actions">
+              <button type="button" onclick="history.back()" class="btn-cancel">
+                ← Voltar
+              </button>
+              <button type="submit" class="btn-submit">
+                Finalizar Pedido 🛒
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Loja de Bebês Reborn - Sprint 2</p>
+      <p class="team-info">
+        Desenvolvido por: Rafael Feltrim, João Pedro Marafiotti, João Vinícius Gonçalves dos Santos
+      </p>
+    </div>
+  </footer>
+
+  <script src="/js/checkout.js"></script>
+</body>
+</html>

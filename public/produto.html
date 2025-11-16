@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto - Loja de Bebês Reborn</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/produto.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">🍼 Loja de Bebês Reborn</h1>
+      <p class="subtitle">Bebês hiper-realistas feitos com amor e cuidado</p>
+      <nav class="breadcrumb">
+        <a href="/">Início</a> > <span id="product-name-breadcrumb">Produto</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Loading State -->
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Carregando detalhes do produto...</p>
+      </div>
+
+      <!-- Error State -->
+      <div id="error" class="error-message" style="display: none;">
+        <p>❌ Não foi possível carregar o produto.</p>
+        <p class="error-details"></p>
+        <button onclick="location.href='/'" class="btn-back">Voltar para a Loja</button>
+      </div>
+
+      <!-- Product Details -->
+      <div id="product-details" class="product-details" style="display: none;">
+        <div class="product-gallery">
+          <img id="product-image" src="" alt="" class="product-main-image">
+        </div>
+
+        <div class="product-info-section">
+          <h1 id="product-name" class="product-title"></h1>
+          
+          <div class="product-price-section">
+            <span class="price-label">Preço:</span>
+            <p id="product-price" class="product-price-value"></p>
+          </div>
+
+          <div class="product-description">
+            <h2>Sobre este Bebê Reborn</h2>
+            <p id="product-description">
+              Bebê Reborn confeccionado artesanalmente com materiais de alta qualidade. 
+              Cada detalhe foi cuidadosamente trabalhado para proporcionar uma experiência 
+              única e realista. Ideal para colecionadores e presente especial.
+            </p>
+          </div>
+
+          <div class="product-features">
+            <h3>Características:</h3>
+            <ul>
+              <li>✅ Confeccionado artesanalmente</li>
+              <li>✅ Materiais de alta qualidade</li>
+              <li>✅ Detalhes hiper-realistas</li>
+              <li>✅ Certificado de autenticidade</li>
+              <li>✅ Embalagem especial para presente</li>
+            </ul>
+          </div>
+
+          <div class="product-actions">
+            <button id="btn-buy" class="btn-buy-now">
+              🛒 Comprar Agora
+            </button>
+            <button onclick="location.href='/'" class="btn-back-store">
+              ← Voltar para a Loja
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Loja de Bebês Reborn - Sprint 2</p>
+      <p class="team-info">
+        Desenvolvido por: Rafael Feltrim, João Pedro Marafiotti, João Vinícius Gonçalves dos Santos
+      </p>
+    </div>
+  </footer>
+
+  <script src="/js/produto.js"></script>
+</body>
+</html>
