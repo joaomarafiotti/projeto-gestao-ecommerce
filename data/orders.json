@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "order-1763341771963-2l0gnaxgp",
+    "produto": {
+      "id": "prod-001",
+      "name": "Bebê Reborn Alice",
+      "price": 299.9,
+      "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop"
+    },
+    "cliente": {
+      "nome": "Laura peetz",
+      "email": "laura@peetz.com",
+      "telefone": "(19) 99777-5596"
+    },
+    "endereco": {
+      "cep": "13566-010",
+      "estado": "SP",
+      "cidade": "São Carlos",
+      "endereco": "Capitão Alberto Mendes Junior",
+      "numero": "53",
+      "complemento": "rep"
+    },
+    "total": 299.9,
+    "data": "2025-11-17T01:09:31.902Z",
+    "status": "pendente",
+    "createdAt": "2025-11-17T01:09:31.963Z"
+  }
+]
