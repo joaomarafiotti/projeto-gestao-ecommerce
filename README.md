@@ -1,12 +1,14 @@
 # 🍼 Loja de Bebês Reborn - E-commerce MVP
 
-![Status](https://img.shields.io/badge/Status-Sprint%201%20Concluída-success)
+![Status](https://img.shields.io/badge/Status-Sprint%202%20Concluída-success)
 ![Node](https://img.shields.io/badge/Node.js-18+-green)
 ![Express](https://img.shields.io/badge/Express-4.x-blue)
 
 ## 📋 Sobre o Projeto
 
-MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos. O sistema permite visualizar um catálogo de produtos, ver detalhes e realizar compras de forma simples e intuitiva.
+MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos.
+
+**Sprint 2:** Implementação da página de detalhes do produto e formulário de checkout completo com validações e máscaras automáticas.
 
 **Equipe de Desenvolvimento:**
 - Rafael Feltrim - Backend e Infraestrutura
@@ -58,9 +60,11 @@ O servidor será iniciado na porta 3000. Você verá a seguinte mensagem:
 ============================================================
 ```
 
-### Acessando a Aplicação
+## 💾 Acessando a Aplicação
 
 - **Interface Web:** http://localhost:3000
+- **Página de Produto:** http://localhost:3000/produto.html?id=prod-001
+- **Checkout:** http://localhost:3000/checkout.html?id=prod-001
 - **API de Produtos:** http://localhost:3000/api/products
 - **Produto Específico:** http://localhost:3000/api/products/prod-001
 
@@ -74,17 +78,21 @@ projeto-gestao-ecommerce/
 │   └── products.json          # Catálogo com 6 produtos
 ├── public/
 │   ├── index.html             # Página principal da loja
+│   ├── produto.html           # Página de detalhes do produto (NOVO)
+│   ├── checkout.html          # Página de checkout (NOVO)
 │   ├── css/
-│   │   └── styles.css         # Estilos responsivos
+│   │   ├── styles.css         # Estilos da página principal
+│   │   ├── produto.css        # Estilos da página de produto (NOVO)
+│   │   └── checkout.css       # Estilos do checkout (NOVO)
 │   └── js/
-│       └── app.js             # Lógica de renderização dos produtos
+│       ├── app.js             # Lógica da página principal
+│       ├── produto.js         # Lógica de detalhes (NOVO)
+│       └── checkout.js        # Lógica do checkout (NOVO)
 ├── src/
-│   ├── server.js              # Servidor Express (ponto de entrada)
+│   ├── server.js              # Servidor Express
 │   └── routes/
 │       └── api.js             # Rotas da API REST
 ├── package.json               # Dependências e scripts
-├── INSTRUCOES.md              # Documentação detalhada da Sprint 1
-├── CHECKLIST-SPRINT-1.md      # Checklist de validação
 └── README.md                  # Este arquivo
 ```
 
@@ -118,26 +126,29 @@ projeto-gestao-ecommerce/
 - 6 horas de desenvolvimento
 - 0 defeitos críticos
 
-### 🔜 Sprint 2 (12/11 - 18/11/2025)
+### ✅ Sprint 2 (12/11 - 18/11/2025) - CONCLUÍDA
 
-- Página de detalhes do produto
-- Botão "Comprar agora"
-- Formulário de checkout (esqueleto)
-- Validações de entrada no frontend
+**Frontend:**
+- ✅ Página de detalhes do produto (produto.html)
+- ✅ Galeria de imagens do produto
+- ✅ Informações detalhadas (descrição, características)
+- ✅ Botão "Comprar Agora" funcional
+- ✅ Formulário de checkout completo (checkout.html)
+- ✅ Validações de formulário (email, telefone, CEP)
+- ✅ Máscaras automáticas nos inputs
+- ✅ Navegação entre páginas com query params
+- ✅ Resumo do pedido dinâmico
 
-### 🔜 Sprint 3 (19/11 - 25/11/2025)
+**Métricas Sprint 2:**
+- 10 Story Points concluídos
+- +1.100 linhas de código
+- 3 novas páginas (produto, checkout)
+- 0 defeitos críticos
 
-- API POST /api/orders
-- Validação de dados do pedido
-- Persistência de pedidos em JSON
-- Tela de confirmação de compra
-- Download do pedido em JSON
+### 📌 Próximas Sprints
 
-### 🔜 Sprint 4 (26/11 - 02/12/2025)
-
-- Testes automatizados
-- Documentação técnica completa
-- Ajustes finais de UX
+**Sprint 3:** Lógica de pedidos e confirmação  
+**Sprint 4:** Testes e documentação final
 
 ---
 
@@ -185,9 +196,13 @@ curl http://localhost:3000/api/products/prod-001
 
 ### Teste da Interface:
 1. Abra http://localhost:3000 no navegador
-2. Verifique se 6 produtos aparecem
-3. Clique em um produto
-4. Teste responsividade (F12 > Device Toolbar)
+2. Clique em qualquer produto do catálogo
+3. Veja os detalhes do produto (galeria, descrição, preço)
+4. Clique em "Comprar Agora"
+5. Preencha o formulário de checkout
+6. Teste as validações (email inválido, campos vazio)
+7. Verifique as máscaras (telefone, CEP)
+8. Teste responsividade (F12 > Device Toolbar)
 
 ---
 
@@ -212,16 +227,16 @@ curl http://localhost:3000/api/products/prod-001
 
 ---
 
-## 📈 Métricas (Sprint 1)
+## 📊 Métricas (Sprint 1 + Sprint 2)
 
-| Métrica | Valor |
-|---------|-------|
-| Story Points | 11/11 (100%) |
-| Linhas de Código | 689 |
-| Horas | 6h |
-| Produtividade | 114.8 linhas/hora |
-| Defeitos | 0 |
-| Testes | 19/19 passando |
+| Métrica | Sprint 1 | Sprint 2 | Total |
+|---------|----------|----------|-------|
+| Story Points | 11 | 10 | 21 |
+| Linhas de Código | 689 | 1.100+ | 1.789+ |
+| Páginas HTML | 1 | +2 | 3 |
+| Arquivos CSS | 1 | +2 | 3 |
+| Arquivos JS | 1 | +2 | 3 |
+| Defeitos | 0 | 0 | 0 |
 
 ---
 
@@ -238,4 +253,4 @@ curl http://localhost:3000/api/products/prod-001
 - João Pedro Marafiotti
 - João Vinícius Gonçalves dos Santos
 
-**Versão:** 1.0.0 - Sprint 1 ✅
+**Versão:** 2.0.0 - Sprint 2 ✅
