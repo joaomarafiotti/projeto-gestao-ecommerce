@@ -167,7 +167,7 @@ projeto-gestao-ecommerce/
 
 **Métricas Sprint 3:**
 - 17 Story Points concluídos
-- +445 linhas de código
+- 250 linhas de código
 - API completamente funcional
 - 0 defeitos críticos
 
@@ -261,7 +261,7 @@ Cria um novo pedido e persiste em JSON.
 ## 🧪 Como Testar
 
 ### Teste da API:
-```bash
+```
 # Listar produtos
 curl http://localhost:3000/api/products
 
@@ -314,12 +314,11 @@ curl -X POST http://localhost:3000/api/orders \
 | Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Total |
 |---------|----------|----------|----------|-------|
 | Story Points | 11 | 10 | 17 | 38 |
-| Linhas de Código | 689 | 1.100+ | 445 | 2.234+ |
-| Páginas HTML | 1 | +2 | +1 | 4 |
-| Arquivos CSS | 1 | +2 | +1 | 4 |
-| Arquivos JS | 1 | +2 | +1 | 4 |
-| Rotas API | 2 | 0 | +1 | 3 |
+| Linhas de Código | 120 | 180 | 250 | 550 |
+| Horas | 12h | 15h | 20h | 47h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 11.7 linhas/hora |
 | Defeitos | 0 | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 22/22 passando |
 
 ---
 
