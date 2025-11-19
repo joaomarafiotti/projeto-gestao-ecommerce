@@ -44,7 +44,7 @@ npm install
 ### Executando a Aplicação
 
 Inicie o servidor:
-```bash
+``bash
 npm start
 ```
 
@@ -141,7 +141,7 @@ projeto-gestao-ecommerce/
 
 **Métricas Sprint 2:**
 - 10 Story Points concluídos
-- +1.100 linhas de código
+- 180 linhas de código
 - 3 novas páginas (produto, checkout)
 - 0 defeitos críticos
 
@@ -232,11 +232,11 @@ curl http://localhost:3000/api/products/prod-001
 | Métrica | Sprint 1 | Sprint 2 | Total |
 |---------|----------|----------|-------|
 | Story Points | 11 | 10 | 21 |
-| Linhas de Código | 689 | 1.100+ | 1.789+ |
-| Páginas HTML | 1 | +2 | 3 |
-| Arquivos CSS | 1 | +2 | 3 |
-| Arquivos JS | 1 | +2 | 3 |
+| Linhas de Código | 120 | 180 | 300 |
+| Horas | 12h | 15h | 27h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 11.1 linhas/hora |
 | Defeitos | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 12/12 passando |
 
 ---
 
