@@ -211,7 +211,7 @@ Retorna um produto específico por ID.
 Cria um novo pedido.
 
 **Request Body:**
-```json
+```
 {
   "produto": {
     "id": "prod-001",
@@ -293,16 +293,42 @@ curl http://localhost:3000/api/products/prod-001
 
 ---
 
+## 📊 Métricas (Sprint 1)
+
+| Métrica | Valor |
+|---------|-------|
+| Story Points | 11/11 (100%) |
+| Linhas de Código | 120 |
+| Horas | 12h |
+| Produtividade | 10 linhas/hora |
+| Defeitos | 0 |
+| Testes | 5/5 passando |
+
+---
+
+## 📊 Métricas (Sprint 2)
+
+| Métrica | Valor |
+|---------|-------|
+| Story Points | 10/10 (100%) |
+| Linhas de Código | 180 |
+| Horas | 15h |
+| Produtividade | 12 linhas/hora |
+| Defeitos | 0 |
+| Testes | 7/7 passando |
+
+---
+
 ## 📊 Métricas (Sprint 1 + Sprint 2)
 
 | Métrica | Sprint 1 | Sprint 2 | Total |
 |---------|----------|----------|-------|
 | Story Points | 11 | 10 | 21 |
-| Linhas de Código | 689 | 1.100+ | 1.789+ |
-| Páginas HTML | 1 | +2 | 3 |
-| Arquivos CSS | 1 | +2 | 3 |
-| Arquivos JS | 1 | +2 | 3 |
+| Linhas de Código | 120 | 180 | 300 |
+| Horas | 12h | 15h | 27h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 11.1 linhas/hora |
 | Defeitos | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 12/12 passando |
 
 ---
 
