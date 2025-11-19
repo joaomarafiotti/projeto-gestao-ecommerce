@@ -116,8 +116,8 @@ projeto-gestao-ecommerce/
 
 **Métricas Sprint 1:**
 - 11 Story Points concluídos
-- 689 linhas de código
-- 6 horas de desenvolvimento
+- 120 linhas de código
+- 12 horas de desenvolvimento
 - 0 defeitos críticos
 
 ### 📌 Próximas Sprints
@@ -204,11 +204,11 @@ curl http://localhost:3000/api/products/prod-001
 | Métrica | Valor |
 |---------|-------|
 | Story Points | 11/11 (100%) |
-| Linhas de Código | 689 |
-| Horas | 6h |
-| Produtividade | 114.8 linhas/hora |
+| Linhas de Código | 120 |
+| Horas | 12h |
+| Produtividade | 10 linhas/hora |
 | Defeitos | 0 |
-| Testes | 19/19 passando |
+| Testes | 5/5 passando |
 
 ---
 
