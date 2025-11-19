@@ -146,21 +146,21 @@ function validateForm(formData) {
   if (nome.length < 3) {
     errors.push('Nome deve ter pelo menos 3 caracteres');
   }
-  
+
   // Validar email
   const email = formData.get('email').trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     errors.push('E-mail inválido');
   }
-  
+
   // Validar telefone
   const telefone = formData.get('telefone').trim();
   const telefoneRegex = /^\(\d{2}\)\s?\d{4,5}-?\d{4}$/;
   if (!telefoneRegex.test(telefone) && telefone.replace(/\D/g, '').length < 10) {
     errors.push('Telefone inválido');
   }
-  
+
   // Validar CEP
   const cep = formData.get('cep').trim();
   const cepRegex = /^\d{5}-?\d{3}$/;

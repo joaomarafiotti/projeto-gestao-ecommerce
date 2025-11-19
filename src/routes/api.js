@@ -20,9 +20,9 @@ router.get('/products', async (req, res) => {
     res.status(200).json(products);
   } catch (error) {
     console.error('[API] Erro ao buscar produtos:', error.message);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Erro ao carregar produtos',
-      message: error.message 
+      message: error.message
     });
   }
 });
@@ -47,9 +47,9 @@ router.get('/products/:id', async (req, res) => {
     res.status(200).json(product);
   } catch (error) {
     console.error('[API] Erro ao buscar produto:', error.message);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Erro ao carregar produto',
-      message: error.message 
+      message: error.message
     });
   }
 });

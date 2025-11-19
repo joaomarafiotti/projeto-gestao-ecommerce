@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/joaomarafiotti/projeto-gestao-ecommerce.git"
   },
-  "keywords": ["e-commerce", "bebês reborn", "nodejs", "express"],
+  "keywords": [
+    "e-commerce",
+    "bebês reborn",
+    "nodejs",
+    "express"
+  ],
   "author": "Rafael Feltrim, João Pedro Marafiotti, João Vinícius Gonçalves dos Santos",
   "license": "ISC",
   "bugs": {

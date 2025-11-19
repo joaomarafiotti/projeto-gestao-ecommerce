@@ -34,7 +34,9 @@ app.use((req, res) => {
 // Tratamento de erros gerais
 app.use((err, req, res, next) => {
   console.error('[ERRO]', err.stack);
-  res.status(500).json({ error: 'Erro interno do servidor' });
+  res.status(500).json({
+    error: 'Erro interno do servidor'
+  });
 });
 
 // Iniciar servidor
