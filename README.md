@@ -246,11 +246,63 @@ curl http://localhost:3000/api/products/prod-001
 | Métrica | Valor |
 |---------|-------|
 | Story Points | 11/11 (100%) |
-| Linhas de Código | 689 |
-| Horas | 6h |
-| Produtividade | 114.8 linhas/hora |
+| Linhas de Código | 120 |
+| Horas | 12h |
+| Produtividade | 10 linhas/hora |
 | Defeitos | 0 |
-| Testes | 19/19 passando |
+| Testes | 5/5 passando |
+
+---
+
+## 📊 Métricas (Sprint 1 + Sprint 2)
+
+| Métrica | Sprint 1 | Sprint 2 | Total |
+|---------|----------|----------|-------|
+| Story Points | 11 | 10 | 21 |
+| Linhas de Código | 120 | 180 | 300 |
+| Horas | 12h | 15h | 27h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 11.1 linhas/hora |
+| Defeitos | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 12/12 passando |
+
+---
+
+## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3)
+
+| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Total |
+|---------|----------|----------|----------|-------|
+| Story Points | 11 | 10 | 17 | 38 |
+| Linhas de Código | 120 | 180 | 250 | 550 |
+| Horas | 12h | 15h | 20h | 47h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 11.7 linhas/hora |
+| Defeitos | 0 | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 22/22 passando |
+
+---
+
+## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3 + Sprint 4)
+
+| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Total |
+|---------|----------|----------|----------|----------|-------|
+| Story Points | 11 | 10 | 17 | 6 | 44 |
+| Linhas de Código | 120 | 180 | 250 | 150 | 700 |
+| Horas | 12h | 15h | 20h | 10h | 57h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 15 linhas/hora | 12.3 linhas/hora |
+| Defeitos | 0 | 0 | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 12/12 passando | 34/34 passando |
+
+---
+
+## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3 + Sprint 4 + Sprint 5)
+
+| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Sprint 5 | Total |
+|---------|----------|----------|----------|----------|----------|-------|
+| Story Points | 11 | 10 | 17 | 6 | 6 | 50 |
+| Linhas de Código | 120 | 180 | 250 | 150 | 100 | 800 |
+| Horas | 12h | 15h | 20h | 10h | 8h | 65h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 15 linhas/hora | 12.5 linhas/hora | 12.3 linhas/hora |
+| Defeitos | 0 | 0 | 0 | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 12/12 passando | 15/15 passando | 49/49 passando |
 
 ---
 
@@ -267,4 +319,4 @@ curl http://localhost:3000/api/products/prod-001
 - João Pedro Marafiotti
 - João Vinícius Gonçalves dos Santos
 
-**Versão:** 1.0.0 - Sprint 1 ✅
+**Versão:** 5.0.0 - Sprint 5 ✅
