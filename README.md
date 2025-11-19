@@ -1,12 +1,12 @@
 # 🍼 Loja de Bebês Reborn - E-commerce MVP
 
-![Status](https://img.shields.io/badge/Status-Completo-success)
+![Status](https://img.shields.io/badge/Status-Sprint%202-yellow)
 ![Node](https://img.shields.io/badge/Node.js-18+-green)
 ![Express](https://img.shields.io/badge/Express-4.x-blue)
 
 ## 📋 Sobre o Projeto
 
-MVP de e-commerce completo para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos. O sistema permite visualizar catálogo, ver detalhes, realizar compras e confirmar pedidos.
+MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos. O sistema permite visualizar catálogo e ver detalhes dos produtos (Sprint 1 + Sprint 2).
 
 **Equipe de Desenvolvimento:**
 - Rafael Feltrim - Backend e Infraestrutura
@@ -92,35 +92,29 @@ projeto-gestao-ecommerce/
 
 ## 🎯 Funcionalidades
 
-### ✅ Sistema Completo (Todas as Sprints)
+### ✅ Sprint 1 + Sprint 2 (Em Progresso)
 
 **Backend:**
 - ✅ Servidor Express configurado na porta 3000
 - ✅ API REST para listagem de produtos (GET /api/products)
 - ✅ API REST para produto específico (GET /api/products/:id)
-- ✅ API REST para criar pedidos (POST /api/orders)
 - ✅ Sistema de logs de requisições
 - ✅ Tratamento de erros (404, 500)
-- ✅ Validação completa de dados
 
 **Frontend:**
 - ✅ Página inicial responsiva com catálogo
 - ✅ Grid de produtos com 6 bebês Reborn
 - ✅ Página de detalhes do produto
-- ✅ Formulário de checkout completo
-- ✅ Página de confirmação de pedido
-- ✅ Validações de formulário (email, telefone, CEP)
-- ✅ Máscaras automáticas nos inputs
-- ✅ Download do pedido em JSON
+- ✅ Botão "Comprar agora"
+- ✅ Esqueleto do formulário de checkout
 - ✅ Design responsivo (Desktop/Tablet/Mobile)
 
 **Dados:**
 - ✅ Estrutura JSON com 6 produtos (products.json)
-- ✅ Persistência de pedidos (orders.json)
 
-**Métricas:**
-- 44 Story Points concluídos (100%)
-- ~2.500 linhas de código
+**Métricas Sprint 1 + 2:**
+- 21 Story Points concluídos
+- ~300 linhas de código
 - 0 defeitos críticos
 - Performance excepcional (API < 2ms)
 
@@ -155,50 +149,6 @@ Retorna um produto específico por ID.
   "name": "Bebê Reborn Alice",
   "price": 299.90,
   "imageUrl": "https://..."
-}
-```
-
-### POST /api/orders
-
-Cria um novo pedido.
-
-**Request Body:**
-```json
-{
-  "produto": {
-    "id": "prod-001",
-    "name": "Bebê Reborn Alice",
-    "price": 299.90,
-    "imageUrl": "https://..."
-  },
-  "cliente": {
-    "nome": "João Silva",
-    "email": "joao@example.com",
-    "telefone": "(11) 98765-4321"
-  },
-  "endereco": {
-    "cep": "01234-567",
-    "estado": "SP",
-    "cidade": "São Paulo",
-    "endereco": "Rua Exemplo",
-    "numero": "123",
-    "complemento": "Apto 45"
-  },
-  "total": 299.90
-}
-```
-
-**Resposta (201 Created):**
-```json
-{
-  "success": true,
-  "message": "Pedido criado com sucesso",
-  "order": {
-    "id": "order-1234567890-abc123",
-    "status": "pendente",
-    "createdAt": "2025-11-16T12:00:00.000Z",
-    ...
-  }
 }
 ```
 
@@ -241,16 +191,16 @@ curl http://localhost:3000/api/products/prod-001
 
 ---
 
-## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3 + Sprint 4)
+## 📊 Métricas (Sprint 1 + Sprint 2)
 
-| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Total |
-|---------|----------|----------|----------|----------|-------|
-| Story Points | 11 | 10 | 17 | 6 | 44 |
-| Linhas de Código | 120 | 180 | 250 | 150 | 700 |
-| Horas | 12h | 15h | 20h | 10h | 57h |
-| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 15 linhas/hora | 12.3 linhas/hora |
-| Defeitos | 0 | 0 | 0 | 0 | 0 |
-| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 12/12 passando | 34/34 passando |
+| Métrica | Sprint 1 | Sprint 2 | Total |
+|---------|----------|----------|-------|
+| Story Points | 11 | 10 | 21 |
+| Linhas de Código | 120 | 180 | 300 |
+| Horas | 12h | 15h | 27h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 11.1 linhas/hora |
+| Defeitos | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 12/12 passando |
 
 ---
 
@@ -267,4 +217,4 @@ curl http://localhost:3000/api/products/prod-001
 - João Pedro Marafiotti
 - João Vinícius Gonçalves dos Santos
 
-**Versão:** 1.0.0 - Sistema Completo (4 Sprints) ✅
+**Versão:** 0.2.0 - Sprint 2 em Progresso (2 Sprints concluídas) 🚧
