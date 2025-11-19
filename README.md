@@ -212,6 +212,18 @@ curl http://localhost:3000/api/products/prod-001
 
 ---
 
+## 📱 Resumos para Apresentação
+
+Documentos formatados para WhatsApp com o progresso Sprint 1 → Sprint 2:
+
+- **`RESUMO_SPRINT1-SPRINT2_WHATSAPP.md`** - Versão completa e detalhada
+- **`RESUMO_SPRINT1-SPRINT2_WHATSAPP_CURTO.md`** - Versão resumida para mensagens rápidas
+- **`COMO_USAR_RESUMO_WHATSAPP.md`** - Guia de uso com dicas e formatação
+
+Esses documentos estão prontos para copiar e colar diretamente no WhatsApp para apresentações em sala.
+
+---
+
 **Equipe:**
 - Rafael Feltrim
 - João Pedro Marafiotti
