@@ -44,12 +44,10 @@ function createProductCard(product) {
     </div>
   `;
   
-  // Event listener para clique (navegação futura - Sprint 2)
+  // Event listener para clique - navega para página de detalhes
   card.addEventListener('click', () => {
     console.log(`Produto clicado: ${product.name} (ID: ${product.id})`);
-    // TODO Sprint 2: Navegar para página de detalhes
-    // window.location.href = `/produto.html?id=${product.id}`;
-    alert(`Produto: ${product.name}\nPreço: ${formatPrice(product.price)}\n\n(Detalhes disponíveis na Sprint 2)`);
+    window.location.href = `/produto.html?id=${product.id}`;
   });
   
   return card;
