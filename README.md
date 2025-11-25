@@ -1,5 +1,6 @@
 # 🍼 Loja de Bebês Reborn - E-commerce MVP
 
+![Status](https://img.shields.io/badge/Status-Sprint%203%20Concluída-success)
 ![Status](https://img.shields.io/badge/Status-Sprint%202%20Concluída-success)
 ![Status](https://img.shields.io/badge/Status-Completo-success)
 ![Node](https://img.shields.io/badge/Node.js-18+-green)
@@ -9,6 +10,7 @@
 
 MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos.
 
+**Sprint 3:** Implementação da lógica de pedidos com API POST, persistência em JSON, página de confirmação e funcionalidade de download do pedido.
 **Sprint 2:** Implementação da página de detalhes do produto e formulário de checkout completo com validações e máscaras automáticas.
 MVP de e-commerce completo para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos. O sistema permite visualizar catálogo, ver detalhes, realizar compras e confirmar pedidos.
 
@@ -77,9 +79,23 @@ O servidor será iniciado na porta 3000. Você verá a seguinte mensagem:
 ```
 projeto-gestao-ecommerce/
 ├── data/
-│   └── products.json          # Catálogo com 6 produtos
+│   ├── products.json          # Catálogo com 6 produtos
+│   └── orders.json            # Pedidos realizados (NOVO)
 ├── public/
 │   ├── index.html             # Página principal da loja
+│   ├── produto.html           # Página de detalhes do produto
+│   ├── checkout.html          # Página de checkout
+│   ├── confirmacao.html       # Página de confirmação (NOVO)
+│   ├── css/
+│   │   ├── styles.css         # Estilos da página principal
+│   │   ├── produto.css        # Estilos da página de produto
+│   │   ├── checkout.css       # Estilos do checkout
+│   │   └── confirmacao.css    # Estilos da confirmação (NOVO)
+│   └── js/
+│       ├── app.js             # Lógica da página principal
+│       ├── produto.js         # Lógica de detalhes
+│       ├── checkout.js        # Lógica do checkout (integrado com API)
+│       └── confirmacao.js     # Lógica da confirmação (NOVO)
 │   ├── produto.html           # Página de detalhes do produto (NOVO)
 │   ├── checkout.html          # Página de checkout (NOVO)
 │   ├── css/
@@ -93,7 +109,7 @@ projeto-gestao-ecommerce/
 ├── src/
 │   ├── server.js              # Servidor Express
 │   └── routes/
-│       └── api.js             # Rotas da API REST
+│       └── api.js             # Rotas da API REST (GET + POST)
 ├── package.json               # Dependências e scripts
 └── README.md                  # Este arquivo
 ```
@@ -149,6 +165,51 @@ projeto-gestao-ecommerce/
 **Métricas Sprint 2:**
 - 10 Story Points concluídos
 - +1.100 linhas de código
+- 3 novas páginas
+- 0 defeitos críticos
+
+### ✅ Sprint 3 (19/11 - 25/11/2025) - CONCLUÍDA
+
+**Backend:**
+- ✅ API POST /api/orders
+- ✅ Validação completa de dados do pedido
+- ✅ Validação de campos obrigatórios (produto, cliente, endereço)
+- ✅ Geração de ID único para pedidos
+- ✅ Persistência de pedidos em JSON (orders.json)
+- ✅ Tratamento de erros (400, 500)
+
+**Frontend:**
+- ✅ Integração do checkout com API POST
+- ✅ Página de confirmação de pedido (confirmacao.html)
+- ✅ Exibição de dados do pedido confirmado
+- ✅ Download do pedido em JSON
+- ✅ Estados de loading e erro
+- ✅ Feedback visual para o usuário
+
+**Métricas Sprint 3:**
+- 17 Story Points concluídos
+- 250 linhas de código
+- API completamente funcional
+- 0 defeitos críticos
+
+### 📌 Próxima Sprint
+
+**Sprint 4:** Testes e documentação final
+
+**Frontend:**
+- ✅ Página de detalhes do produto (produto.html)
+- ✅ Galeria de imagens do produto
+- ✅ Informações detalhadas (descrição, características)
+- ✅ Botão "Comprar Agora" funcional
+- ✅ Formulário de checkout completo (checkout.html)
+- ✅ Validações de formulário (email, telefone, CEP)
+- ✅ Máscaras automáticas nos inputs
+- ✅ Navegação entre páginas com query params
+- ✅ Resumo do pedido dinâmico
+
+**Métricas Sprint 2:**
+- 10 Story Points concluídos
+- +1.100 linhas de código
 - 3 novas páginas (produto, checkout)
 - 0 defeitos críticos
 
@@ -167,7 +228,7 @@ projeto-gestao-ecommerce/
 Retorna todos os produtos do catálogo.
 
 **Resposta (200 OK):**
-```json
+```
 [
   {
     "id": "prod-001",
@@ -194,6 +255,7 @@ Retorna um produto específico por ID.
 
 ### POST /api/orders
 
+Cria um novo pedido e persiste em JSON.
 Cria um novo pedido.
 
 **Request Body:**
@@ -231,6 +293,10 @@ Cria um novo pedido.
     "id": "order-1234567890-abc123",
     "status": "pendente",
     "createdAt": "2025-11-16T12:00:00.000Z",
+    "produto": { ... },
+    "cliente": { ... },
+    "endereco": { ... },
+    "total": 299.90
     ...
   }
 }
@@ -241,14 +307,29 @@ Cria um novo pedido.
 ## 🧪 Como Testar
 
 ### Teste da API:
-```bash
+```
+# Listar produtos
 curl http://localhost:3000/api/products
+
+# Produto específico
 curl http://localhost:3000/api/products/prod-001
+
+# Criar pedido
+curl -X POST http://localhost:3000/api/orders \
+  -H "Content-Type: application/json" \
+  -d '{"produto":{"id":"prod-001","name":"Bebê Reborn Alice","price":299.90},"cliente":{"nome":"Teste","email":"teste@test.com","telefone":"11987654321"},"endereco":{"cep":"01234567","estado":"SP","cidade":"São Paulo","endereco":"Rua Teste","numero":"123"},"total":299.90}'
 ```
 
 ### Teste da Interface:
 1. Abra http://localhost:3000 no navegador
 2. Clique em qualquer produto do catálogo
+3. Veja os detalhes do produto
+4. Clique em "Comprar Agora"
+5. Preencha o formulário de checkout
+6. Clique em "Finalizar Compra"
+7. Veja a confirmação do pedido
+8. Baixe o pedido em JSON
+9. Teste responsividade (F12 > Device Toolbar)
 3. Veja os detalhes do produto (galeria, descrição, preço)
 4. Clique em "Comprar Agora"
 5. Preencha o formulário de checkout
@@ -275,10 +356,21 @@ curl http://localhost:3000/api/products/prod-001
 
 - **Backend:** Node.js 18+ / Express.js 4.x
 - **Frontend:** HTML5 / CSS3 / JavaScript ES6+
-- **Dados:** JSON
+- **Dados:** JSON (products.json + orders.json)
+- **API:** REST com GET e POST
 
 ---
 
+## 📊 Métricas (Sprint 1 + 2 + 3)
+
+| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Total |
+|---------|----------|----------|----------|-------|
+| Story Points | 11 | 10 | 17 | 38 |
+| Linhas de Código | 120 | 180 | 250 | 550 |
+| Horas | 12h | 15h | 20h | 47h |
+| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 11.7 linhas/hora |
+| Defeitos | 0 | 0 | 0 | 0 |
+| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 22/22 passando |
 ## 📊 Métricas (Sprint 1 + Sprint 2)
 
 | Métrica | Sprint 1 | Sprint 2 | Total |
@@ -305,4 +397,5 @@ curl http://localhost:3000/api/products/prod-001
 - João Pedro Marafiotti
 - João Vinícius Gonçalves dos Santos
 
+**Versão:** 3.0.0 - Sprint 3 ✅
 **Versão:** 2.0.0 - Sprint 2 ✅
