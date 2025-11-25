@@ -1,10 +1,6 @@
 # 🍼 Loja de Bebês Reborn - E-commerce MVP
 
-<<<<<<< HEAD
 ![Status](https://img.shields.io/badge/Status-Completo-success)
-=======
-![Status](https://img.shields.io/badge/Status-Sprint%202%20Concluída-success)
->>>>>>> sprint-2
 ![Node](https://img.shields.io/badge/Node.js-18+-green)
 ![Express](https://img.shields.io/badge/Express-4.x-blue)
 
@@ -12,19 +8,9 @@
 
 MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos.
 
-<<<<<<< HEAD
 **Sprint 1:** Implementação da base do sistema com backend Express, API REST e frontend responsivo para exibição do catálogo de produtos.
-MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos.
 
-**Sprint 1:** Implementação da base do sistema com backend Express, API REST e frontend responsivo para exibição do catálogo de produtos.
-=======
-MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos.
-
-**Sprint 1:** Implementação da base do sistema com backend Express, API REST e frontend responsivo para exibição do catálogo de produtos.
->>>>>>> sprint-1
-=======
 **Sprint 2:** Implementação da página de detalhes do produto e formulário de checkout completo com validações e máscaras automáticas.
->>>>>>> sprint-2
 
 **Equipe de Desenvolvimento:**
 - Rafael Feltrim - Backend e Infraestrutura
@@ -104,6 +90,11 @@ projeto-gestao-ecommerce/
 │       ├── app.js             # Lógica da página principal
 │       ├── produto.js         # Lógica de detalhes (NOVO)
 │       └── checkout.js        # Lógica do checkout (NOVO)
+├── scripts/
+│   ├── merge-sprints.bat      # Script para Windows
+│   ├── merge-sprints.ps1      # Script PowerShell
+│   ├── merge-sprints.sh       # Script Bash
+│   └── README.md              # Documentação dos scripts
 ├── src/
 │   ├── server.js              # Servidor Express
 │   └── routes/
@@ -346,6 +337,20 @@ curl http://localhost:3000/api/products/prod-001
 | Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 15 linhas/hora | 12.5 linhas/hora | 12.3 linhas/hora |
 | Defeitos | 0 | 0 | 0 | 0 | 0 | 0 |
 | Testes | 5/5 passando | 7/7 passando | 10/10 passando | 12/12 passando | 15/15 passando | 49/49 passando |
+
+---
+
+## 🔄 Automação de Merge das Sprints
+
+Para facilitar o processo de merge das branches de sprint, foram criados scripts de automação na pasta `scripts/`:
+
+- **Windows:** Execute `scripts\merge-sprints.bat`
+- **Linux/macOS:** Execute `scripts/merge-sprints.sh`
+- **PowerShell:** Execute `scripts\merge-sprints.ps1`
+
+Esses scripts automatizam o processo de merge das branches sprint-1 até sprint-5 na branch main e fazem o push para o repositório upstream.
+
+Documentação completa disponível em `scripts/README.md`.
 
 ---
 
