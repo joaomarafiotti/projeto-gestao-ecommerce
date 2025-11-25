@@ -310,19 +310,6 @@ curl http://localhost:3000/api/products/prod-001
 
 ---
 
-## 📊 Métricas (Sprint 1 + Sprint 2)
-
-| Métrica | Sprint 1 | Sprint 2 | Total |
-|---------|----------|----------|-------|
-| Story Points | 11 | 10 | 21 |
-| Linhas de Código | 120 | 180 | 300 |
-| Horas | 12h | 15h | 27h |
-| Produtividade | 10 linhas/hora | 12 linhas/hora | 11.1 linhas/hora |
-| Defeitos | 0 | 0 | 0 |
-| Testes | 5/5 passando | 7/7 passando | 12/12 passando |
-
----
-
 ## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3)
 
 | Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Total |
