@@ -248,6 +248,19 @@ async function handleCheckoutSubmit(event) {
   
   console.log('📦 Dados do pedido preparados:', orderData);
   
+  // SPRINT 2: Apenas exibir mensagem (lógica de envio será na Sprint 3)
+  alert(
+    `✅ Pedido preparado com sucesso!\n\n` +
+    `Produto: ${orderData.produto.name}\n` +
+    `Cliente: ${orderData.cliente.nome}\n` +
+    `Total: ${formatPrice(orderData.total)}\n\n` +
+    `Na Sprint 3, este pedido será enviado para a API e salvo.`
+  );
+  
+  // Salvar no localStorage temporariamente (para demonstração)
+  localStorage.setItem('lastOrder', JSON.stringify(orderData));
+  
+  console.log('✅ Pedido salvo no localStorage (temporário)');
   // Desabilitar botão submit durante processamento
   const submitButton = formCheckout.querySelector('.btn-submit');
   submitButton.disabled = true;
