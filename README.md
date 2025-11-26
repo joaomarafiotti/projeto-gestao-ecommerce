@@ -139,23 +139,10 @@ projeto-gestao-ecommerce/
 - 0 defeitos críticos
 - Performance excepcional (API < 2ms)
 
-### ✅ Sprint 2 (12/11 - 18/11/2025) - CONCLUÍDA
-
-**Frontend:**
-- ✅ Página de detalhes do produto (produto.html)
-- ✅ Galeria de imagens do produto
-- ✅ Informações detalhadas (descrição, características)
-- ✅ Botão "Comprar Agora" funcional
-- ✅ Formulário de checkout completo (checkout.html)
-- ✅ Validações de formulário (email, telefone, CEP)
-- ✅ Máscaras automáticas nos inputs
-- ✅ Navegação entre páginas com query params
-- ✅ Resumo do pedido dinâmico
-
-**Métricas Sprint 2:**
-- 10 Story Points concluídos
-- +1.100 linhas de código
-- 3 novas páginas (produto, checkout)
+**Métricas Sprint 1:**
+- 11 Story Points concluídos
+- 120 linhas de código
+- 12 horas de desenvolvimento
 - 0 defeitos críticos
 
 ### 📌 Próximas Sprints
@@ -285,72 +272,6 @@ curl http://localhost:3000/api/products/prod-001
 | Produtividade | 10 linhas/hora |
 | Defeitos | 0 |
 | Testes | 5/5 passando |
-
----
-
-## 📊 Métricas (Sprint 2)
-
-| Métrica | Valor |
-|---------|-------|
-| Story Points | 10/10 (100%) |
-| Linhas de Código | 180 |
-| Horas | 15h |
-| Produtividade | 12 linhas/hora |
-| Defeitos | 0 |
-| Testes | 7/7 passando |
-
----
-
-## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3)
-
-| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Total |
-|---------|----------|----------|----------|-------|
-| Story Points | 11 | 10 | 17 | 38 |
-| Linhas de Código | 120 | 180 | 250 | 550 |
-| Horas | 12h | 15h | 20h | 47h |
-| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 11.7 linhas/hora |
-| Defeitos | 0 | 0 | 0 | 0 |
-| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 22/22 passando |
-
----
-
-## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3 + Sprint 4)
-
-| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Total |
-|---------|----------|----------|----------|----------|-------|
-| Story Points | 11 | 10 | 17 | 6 | 44 |
-| Linhas de Código | 120 | 180 | 250 | 150 | 700 |
-| Horas | 12h | 15h | 20h | 10h | 57h |
-| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 15 linhas/hora | 12.3 linhas/hora |
-| Defeitos | 0 | 0 | 0 | 0 | 0 |
-| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 12/12 passando | 34/34 passando |
-
----
-
-## 📊 Métricas (Sprint 1 + Sprint 2 + Sprint 3 + Sprint 4 + Sprint 5)
-
-| Métrica | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Sprint 5 | Total |
-|---------|----------|----------|----------|----------|----------|-------|
-| Story Points | 11 | 10 | 17 | 6 | 6 | 50 |
-| Linhas de Código | 120 | 180 | 250 | 150 | 100 | 800 |
-| Horas | 12h | 15h | 20h | 10h | 8h | 65h |
-| Produtividade | 10 linhas/hora | 12 linhas/hora | 12.5 linhas/hora | 15 linhas/hora | 12.5 linhas/hora | 12.3 linhas/hora |
-| Defeitos | 0 | 0 | 0 | 0 | 0 | 0 |
-| Testes | 5/5 passando | 7/7 passando | 10/10 passando | 12/12 passando | 15/15 passando | 49/49 passando |
-
----
-
-## 🔄 Automação de Merge das Sprints
-
-Para facilitar o processo de merge das branches de sprint, foram criados scripts de automação na pasta `scripts/`:
-
-- **Windows:** Execute `scripts\merge-sprints.bat`
-- **Linux/macOS:** Execute `scripts/merge-sprints.sh`
-- **PowerShell:** Execute `scripts\merge-sprints.ps1`
-
-Esses scripts automatizam o processo de merge das branches sprint-1 até sprint-5 na branch main e fazem o push para o repositório upstream.
-
-Documentação completa disponível em `scripts/README.md`.
 
 ---
 
