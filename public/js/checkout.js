@@ -175,6 +175,36 @@ function validateForm(formData) {
 }
 
 /**
+ * Envia pedido para a API
+ * @param {Object} orderData - Dados do pedido
+ * @returns {Promise<Object>} Promise com resposta da API
+ */
+async function submitOrder(orderData) {
+  try {
+    const response = await fetch(`${API_BASE_URL}/orders`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(orderData)
+    });
+    
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.message || 'Erro ao processar pedido');
+    }
+    
+    const result = await response.json();
+    console.log('✅ Pedido enviado com sucesso:', result);
+    
+    return result;
+  } catch (error) {
+    console.error('❌ Erro ao enviar pedido:', error);
+    throw error;
+  }
+}
+
+/**
  * Handler do submit do formulário
  * @param {Event} event - Evento de submit
  */
@@ -218,19 +248,37 @@ async function handleCheckoutSubmit(event) {
   
   console.log('📦 Dados do pedido preparados:', orderData);
   
-  // SPRINT 2: Apenas exibir mensagem (lógica de envio será na Sprint 3)
-  alert(
-    `✅ Pedido preparado com sucesso!\n\n` +
-    `Produto: ${orderData.produto.name}\n` +
-    `Cliente: ${orderData.cliente.nome}\n` +
-    `Total: ${formatPrice(orderData.total)}\n\n` +
-    `Na Sprint 3, este pedido será enviado para a API e salvo.`
-  );
+  // Desabilitar botão submit durante processamento
+  const submitButton = formCheckout.querySelector('.btn-submit');
+  submitButton.disabled = true;
+  submitButton.textContent = 'Processando...';
   
-  // Salvar no localStorage temporariamente (para demonstração)
-  localStorage.setItem('lastOrder', JSON.stringify(orderData));
-  
-  console.log('✅ Pedido salvo no localStorage (temporário)');
+  try {
+    // Enviar pedido para a API
+    const result = await submitOrder(orderData);
+    
+    // Salvar no localStorage para exibição na página de confirmação
+    localStorage.setItem('lastOrder', JSON.stringify(result.order));
+    
+    console.log('✅ Pedido salvo, redirecionando para confirmação...');
+    
+    // Redirecionar para página de confirmação
+    window.location.href = `/confirmacao.html?id=${result.order.id}`;
+  } catch (error) {
+    // Reabilitar botão em caso de erro
+    submitButton.disabled = false;
+    submitButton.textContent = 'Finalizar Pedido 🛒';
+    
+    alert(
+      `❌ Erro ao processar pedido:
+
+${error.message}
+
+Por favor, tente novamente.`
+    );
+    
+    console.error('❌ Falha ao processar pedido:', error);
+  }
 }
 
 /**

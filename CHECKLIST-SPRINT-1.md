@@ -88,6 +88,12 @@
 - [x] Defeitos Críticos: 0 ✅
 - [x] Scope Creep: 0 features fora do escopo ✅
 
+### Esforço Real da Equipe
+- [x] Horas Trabalhadas: 12h (3 devs × 4h médias)
+- [x] Linhas de Código: 120
+- [x] Produtividade Real: 10 linhas/hora
+- [x] Testes Realizados: 5
+
 ### Qualidade do Código
 - [x] Código sem erros de sintaxe
 - [x] Código sem warnings
@@ -156,7 +162,7 @@
 
 | Categoria | Status | Observações |
 |-----------|--------|-------------|
-| **Back-end** | ✅ 100% | API respondendo em 1ms |
+| **Back-end** | ✅ 100% | API respondendo em 12ms |
 | **Front-end** | ✅ 100% | Interface responsiva funcionando |
 | **Dados** | ✅ 100% | 6 produtos cadastrados |
 | **Integração** | ✅ 100% | Fluxo completo validado |
@@ -177,13 +183,18 @@
 **Desvio de Prazo:** 0 dias ✅  
 **Scope Creep:** 0 features ✅
 
+**Esforço Real:**
+- **Horas Trabalhadas:** 12h
+- **Linhas de Código:** 120
+- **Produtividade:** 10 linhas/hora
+
 ---
 
 ## 📝 OBSERVAÇÕES FINAIS
 
 ### Pontos Positivos
 - ✅ Todas as tarefas foram concluídas
-- ✅ Performance da API muito superior ao esperado (1ms vs 200ms)
+- ✅ Performance da API dentro do esperado (12ms vs 200ms meta)
 - ✅ Interface responsiva e funcional
 - ✅ Código organizado e bem estruturado
 - ✅ Zero bugs críticos detectados

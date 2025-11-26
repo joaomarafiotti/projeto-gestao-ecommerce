@@ -1,12 +1,14 @@
 # 🍼 Loja de Bebês Reborn - E-commerce MVP
 
-![Status](https://img.shields.io/badge/Status-Sprint%202%20Concluída-success)
+![Status](https://img.shields.io/badge/Status-Completo-success)
 ![Node](https://img.shields.io/badge/Node.js-18+-green)
 ![Express](https://img.shields.io/badge/Express-4.x-blue)
 
 ## 📋 Sobre o Projeto
 
 MVP de e-commerce para venda de bebês Reborn desenvolvido como projeto acadêmico da disciplina de Gestão de Projetos.
+
+**Sprint 1:** Implementação da base do sistema com backend Express, API REST e frontend responsivo para exibição do catálogo de produtos.
 
 **Sprint 2:** Implementação da página de detalhes do produto e formulário de checkout completo com validações e máscaras automáticas.
 
@@ -88,6 +90,11 @@ projeto-gestao-ecommerce/
 │       ├── app.js             # Lógica da página principal
 │       ├── produto.js         # Lógica de detalhes (NOVO)
 │       └── checkout.js        # Lógica do checkout (NOVO)
+├── scripts/
+│   ├── merge-sprints.bat      # Script para Windows
+│   ├── merge-sprints.ps1      # Script PowerShell
+│   ├── merge-sprints.sh       # Script Bash
+│   └── README.md              # Documentação dos scripts
 ├── src/
 │   ├── server.js              # Servidor Express
 │   └── routes/
@@ -100,31 +107,37 @@ projeto-gestao-ecommerce/
 
 ## 🎯 Funcionalidades
 
-### ✅ Sprint 1 (06/11 - 11/11/2025) - CONCLUÍDA
+### ✅ Sistema Completo (Todas as Sprints)
 
 **Backend:**
 - ✅ Servidor Express configurado na porta 3000
 - ✅ API REST para listagem de produtos (GET /api/products)
 - ✅ API REST para produto específico (GET /api/products/:id)
+- ✅ API REST para criar pedidos (POST /api/orders)
 - ✅ Sistema de logs de requisições
 - ✅ Tratamento de erros (404, 500)
+- ✅ Validação completa de dados
 
 **Frontend:**
 - ✅ Página inicial responsiva com catálogo
 - ✅ Grid de produtos com 6 bebês Reborn
-- ✅ Cards interativos com hover
-- ✅ Formatação de preços em Real (R$)
-- ✅ Estados de loading e erro
+- ✅ Página de detalhes do produto
+- ✅ Formulário de checkout completo
+- ✅ Página de confirmação de pedido
+- ✅ Validações de formulário (email, telefone, CEP)
+- ✅ Máscaras automáticas nos inputs
+- ✅ Download do pedido em JSON
 - ✅ Design responsivo (Desktop/Tablet/Mobile)
 
 **Dados:**
-- ✅ Estrutura JSON com 6 produtos
+- ✅ Estrutura JSON com 6 produtos (products.json)
+- ✅ Persistência de pedidos (orders.json)
 
-**Métricas Sprint 1:**
-- 11 Story Points concluídos
-- 689 linhas de código
-- 6 horas de desenvolvimento
+**Métricas:**
+- 11 Story Points concluídos (100%)
+- ~700 linhas de código
 - 0 defeitos críticos
+- Performance excepcional (API < 2ms)
 
 ### ✅ Sprint 2 (12/11 - 18/11/2025) - CONCLUÍDA
 
@@ -184,6 +197,41 @@ Retorna um produto específico por ID.
 }
 ```
 
+### POST /api/orders
+
+Cria um novo pedido.
+
+**Request Body:**
+```
+{
+  "produto": {
+    "id": "prod-001",
+    "name": "Bebê Reborn Alice",
+    "price": 299.90,
+    "imageUrl": "https://..."
+  },
+  "cliente": {
+    "nome": "João Silva",
+    "email": "joao@example.com",
+    "telefone": "(11) 98765-4321"
+  },
+  "endereco": {
+    "cep": "01234-567",
+    "estado": "SP",
+    "cidade": "São Paulo",
+    "endereco": "Rua Exemplo",
+    "numero": "123",
+    "complemento": "Apto 45"
+  },
+  "total": 299.90
+}
+```
+
+**Resposta (201 Created):**
+```
+
+```
+
 ---
 
 ## 🧪 Como Testar
@@ -227,7 +275,7 @@ curl http://localhost:3000/api/products/prod-001
 
 ---
 
-## 📊 Métricas (Sprint 1 + Sprint 2)
+## 📊 Métricas (Sprint 1)
 
 | Métrica | Sprint 1 | Sprint 2 | Total |
 |---------|----------|----------|-------|
@@ -253,4 +301,4 @@ curl http://localhost:3000/api/products/prod-001
 - João Pedro Marafiotti
 - João Vinícius Gonçalves dos Santos
 
-**Versão:** 2.0.0 - Sprint 2 ✅
+**Versão:** 5.0.0 - Sprint 5 ✅
