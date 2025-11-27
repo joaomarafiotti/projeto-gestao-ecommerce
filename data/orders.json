@@ -50,5 +50,31 @@
     "data": "2025-11-25T19:33:11.494Z",
     "status": "pendente",
     "createdAt": "2025-11-25T19:33:11.556Z"
+  },
+  {
+    "id": "order-1764203139158-3lagom822",
+    "produto": {
+      "id": "prod-001",
+      "name": "Bebê Reborn Alice",
+      "price": 299.9,
+      "imageUrl": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop"
+    },
+    "cliente": {
+      "nome": "Arlindo Cruz",
+      "email": "alindinho@gmail.com",
+      "telefone": "(12) 99999-9999"
+    },
+    "endereco": {
+      "cep": "12344-556",
+      "estado": "SP",
+      "cidade": "Santos",
+      "endereco": "Rua de Santos",
+      "numero": "0000",
+      "complemento": "Apartamento 45 bloca 7"
+    },
+    "total": 299.9,
+    "data": "2025-11-27T00:25:39.111Z",
+    "status": "pendente",
+    "createdAt": "2025-11-27T00:25:39.158Z"
   }
 ]
